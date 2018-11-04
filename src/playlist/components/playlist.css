@@ -1,0 +1,17 @@
+.Playlist {
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: wrap;
+    height: 500px;
+    overflow-y: hidden;
+    padding-bottom: 80px;
+  }
+
+  .Playlist .Media{
+    width: calc(90% / 4);
+  }
+  .Playlist .Media img{
+      max-width: 100%;
+      max-height: 100%;
+  }
