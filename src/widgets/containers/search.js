@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import Search from "../components/search";
+import { connect } from "react-redux";
+import * as actions from "../../actions"
 class SearchContainer extends Component {
     state = {
         value: "Luis Fonsi"
     }
     handleSubmit = (event) => {
         event.preventDefault();
-        console.log(this.input.value)
+        this.props.dispatch(actions.searchAsyncEntities(this.input.value))
     }
     setRef = (element) => {
         this.input = element;
@@ -24,4 +26,4 @@ class SearchContainer extends Component {
 
 }
 
-export default SearchContainer;
+export default connect()(SearchContainer);

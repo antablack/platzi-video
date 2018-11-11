@@ -12,9 +12,12 @@ class Media extends Component {
             author: props.author
         }
     }
+    handleClick = (event) =>{
+        this.props.openModal(this.props.id)
+    }
 
     render() {
-        return (<div className="Media" onClick={this.props.handleClick}>
+        return (<div className="Media" onClick={this.handleClick}>
             <div className="Media-cover">
                 <img src={this.props.cover} alt=""/>
             </div>
