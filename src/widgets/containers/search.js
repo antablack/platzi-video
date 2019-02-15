@@ -14,14 +14,14 @@ class SearchContainer extends Component {
         this.input = element;
     }
     handleChange = (event) => {
-        this.setState({value: event.target.value})
+        this.setState({ value: event.target.value })
     }
     render() {
         return <Search
             setRef={this.setRef}
             handleSubmit={this.handleSubmit}
-            handleChange={this.handleChange} 
-            value={this.state.value}/>
+            handleChange={this.handleChange}
+            value={this.state.value} />
     }
 
 }
